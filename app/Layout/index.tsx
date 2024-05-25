@@ -23,7 +23,7 @@ const Layout = ({ children }: Props) => {
   const dispatch = useDispatch();
   const currentSide = useSelector(selectCurrentSide);
   const selectPageList = useSelector(selectedPageList);
-
+  const currentSideStorage = localStorage.getItem("currentSide");
   const mainBg =
     theme === "dark" ? "bg-slate-700 text-white/90" : "bg-slate-100";
 
@@ -38,14 +38,18 @@ const Layout = ({ children }: Props) => {
         <aside
           ref={ref}
           className={`${
-            currentSide ? "min-w-[250px]" : "w-0 hidden"
+            currentSide || currentSideStorage ? "min-w-[250px]" : "w-0 hidden"
           } self-stretch resizable ${
             theme === "dark" ? "bg-slate-950" : "bg-slate-400"
           }`}
         >
           <div className='resizer resizer-right' />
-          {currentSide === "pages" && <PageSide />}
-          {currentSide === "search" && <SearchSide />}
+          {(currentSide === "pages" || currentSideStorage === "pages") && (
+            <PageSide />
+          )}
+          {(currentSide === "search" || currentSideStorage === "search") && (
+            <SearchSide />
+          )}
         </aside>
 
         <main className='w-full flex flex-col items-start flex-1 h-full'>

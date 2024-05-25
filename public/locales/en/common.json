@@ -8,5 +8,10 @@
     "name.skills": "Skills.ts",
     "name.works": "WorkHistory.ts",
     "name.portfolio": "Portfolio.ts",
-    "sidebar.title": "Explorer"
+    "sidebar.title": "Explorer",
+    "welcome.title": "Welcome to my Portfolio Site!",
+    "welcome.pages": "To view pages",
+    "welcome.search": "To search pages",
+    "welcome.lang": "To change the language",
+    "welcome.mode": "To change the mode"
 }

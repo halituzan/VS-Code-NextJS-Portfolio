@@ -14,14 +14,14 @@ type Props = {};
 const PageSide = (props: Props) => {
   const { t } = useTranslation("common");
   const [openPotfolio, setOpenPortfolio] = useState(false);
+  const openPortfolioStorage = localStorage.getItem("openPortfolio");
+
   const dispatch = useDispatch();
   const { theme } = useTheme();
   const pageListStore = useSelector(selectedPageList);
   const pageList = useSelector(pageListing);
 
   const pageHandler = (data: any) => {
-    console.log("data", data);
-
     if (pageListStore.some((i) => i.id == data.id)) {
       dispatch(openCurrentPage({ item: data, isOpen: true }));
     } else {
@@ -40,7 +40,6 @@ const PageSide = (props: Props) => {
       dispatch(openCurrentPage({ item: data, isOpen: true }));
     }
   };
-  console.log(pageList);
 
   return (
     <div className='flex flex-col'>
@@ -60,17 +59,22 @@ const PageSide = (props: Props) => {
         }`}
         onClick={() => {
           setOpenPortfolio(!openPotfolio);
+          if (openPotfolio) {
+            localStorage.setItem("openPortfolio", "false");
+          } else {
+            localStorage.setItem("openPortfolio", "true");
+          }
         }}
       >
-        {!openPotfolio ? (
+        {openPotfolio || openPortfolioStorage == "true" ? (
           <Icon
-            icon='iconamoon:arrow-right-2-light'
+            icon='iconamoon:arrow-down-2-light'
             fontSize={"1.4rem"}
             className='mx-1'
           />
         ) : (
           <Icon
-            icon='iconamoon:arrow-down-2-light'
+            icon='iconamoon:arrow-right-2-light'
             fontSize={"1.4rem"}
             className='mx-1'
           />
@@ -78,7 +82,7 @@ const PageSide = (props: Props) => {
 
         <p>Portfolio</p>
       </div>
-      {openPotfolio && (
+      {(openPotfolio || openPortfolioStorage == "true") && (
         <div className='flex flex-col'>
           {pageList.map((item) => {
             return (

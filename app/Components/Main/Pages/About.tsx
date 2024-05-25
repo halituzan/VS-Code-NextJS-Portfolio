@@ -1,4 +1,5 @@
 import Config from "@/app/Configs/config";
+import { useTheme } from "@/app/Configs/ThemeContext";
 import Image from "next/image";
 import React, { FC } from "react";
 import { useTranslation } from "react-i18next";
@@ -7,7 +8,7 @@ type Props = {};
 
 const About = (props: Props) => {
   const { t } = useTranslation("profile");
-
+  const { theme } = useTheme();
   const getHighlightedText = (text: string, highlights: string[]) => {
     // Split the text into sentences while keeping the period at the end
     const sentences = text.split(/(?<=\.)/);
@@ -20,26 +21,28 @@ const About = (props: Props) => {
       const highlightedSentence = words.map((word, wordIndex) => {
         const cleanWord = word.replace(/[.,]/g, "").toLowerCase(); // Remove punctuation for comparison
         return highlights.includes(cleanWord) ? (
-          <span className='font-bold' key={wordIndex}>
-            {word}
-          </span>
+          <strong key={wordIndex}>{word}</strong>
         ) : (
           word
         );
       });
 
       return (
-        <p key={index} className='mb-2'>
-          {highlightedSentence}
-        </p>
+        <div key={index} className='flex items-start mb-2'>
+          <p>{highlightedSentence}</p>
+        </div>
       );
     });
   };
 
   const description = t("description");
   return (
-    <div className='flex-1 flex items-start justify-between p-5 gap-5 w-full h-full overflow-y-auto bg-slate-300'>
-      <div className='image-and-info flex flex-col justify-start items-center max-w-[350px] self-stretch'>
+    <div
+      className={`flex-1 flex items-start justify-between gap-5 w-full h-full overflow-y-auto ${
+        theme === "dark" ? "bg-slate-800" : "bg-slate-300"
+      }`}
+    >
+      <div className='image-and-info py-5 px-1 flex flex-col justify-start items-center max-w-[350px] self-stretch'>
         <Image
           src='/images/profile.jpg'
           width={1000}
@@ -47,19 +50,41 @@ const About = (props: Props) => {
           className='rounded-full object-fill w-2/3 shadow-md shadow-slate-600'
           alt='Profile Image'
         />
-        <p className='w-full text-center text-slate-900 font-bold mt-2'>
+        <p
+          className={`w-full text-center font-bold mt-2 ${
+            theme === "dark" ? "text-slate-300" : "text-slate-950"
+          }`}
+        >
           {Config.information.title}
         </p>
         <div className='grid grid-cols-6 w-full'>
-          <InfoRow field={t("name")} title={Config.information.name} />
-          <InfoRow field={t("email")} title={Config.information.email} />
-          <InfoRow field={t("phone")} title={Config.information.phone} />
           <InfoRow
+            theme={theme}
+            field={t("name")}
+            title={Config.information.name}
+          />
+          <InfoRow
+            theme={theme}
+            field={t("email")}
+            title={Config.information.email}
+          />
+          <InfoRow
+            theme={theme}
+            field={t("phone")}
+            title={Config.information.phone}
+          />
+          <InfoRow
+            theme={theme}
             field={t("location")}
             title={Config.information.city + "/" + Config.information.country}
           />
-          <InfoRow field={t("degree")} title={Config.information.degree} />
           <InfoRow
+            theme={theme}
+            field={t("degree")}
+            title={Config.information.degree}
+          />
+          <InfoRow
+            theme={theme}
             field={t("freelance")}
             title={
               Config.information.freelance
@@ -68,12 +93,19 @@ const About = (props: Props) => {
             }
           />
           <InfoRow
+            theme={theme}
             field={t("remote")}
             title={Config.information.remote ? t("yes.remote") : t("no.remote")}
           />
         </div>
       </div>
-      <div className='description flex-1 px-3 self-stretch text-slate-900'>
+      <div
+        className={`description flex-1 px-3 self-stretch py-5 ${
+          theme == "dark"
+            ? "bg-slate-900 text-slate-300"
+            : "bg-slate-100 text-slate-950"
+        }`}
+      >
         {getHighlightedText(description, highlightList)}
       </div>
     </div>
@@ -82,13 +114,21 @@ const About = (props: Props) => {
 
 export default About;
 
-export const InfoRow = ({ field, title }: any) => {
+export const InfoRow = ({ field, title, theme }: any) => {
   return (
     <>
-      <p className='px-5 py-2 col-span-2 text-slate-900 font-bold flex items-center'>
+      <p
+        className={`px-5 py-2 col-span-2 font-bold flex items-center ${
+          theme === "dark" ? "text-slate-300" : "text-slate-900"
+        }`}
+      >
         {field}
       </p>
-      <p className='px-5 py-2 col-span-4 break-words w-full text-slate-900 font-medium flex items-center'>
+      <p
+        className={`px-5 py-2 col-span-4 break-words w-full  font-medium flex items-center ${
+          theme === "dark" ? "text-slate-300" : "text-slate-950"
+        }`}
+      >
         {title}
       </p>
     </>

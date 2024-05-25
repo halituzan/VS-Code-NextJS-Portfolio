@@ -1,3 +1,8 @@
+import About from "./About";
+import Portfolio from "./Portfolio";
+import Skills from "./Skills";
+import WorkHistory from "./WorkHistory";
+
 export const pages = [
   {
     id: 1,
@@ -6,6 +11,7 @@ export const pages = [
     key: "about",
     icon: "fluent:code-ts-16-filled",
     isOpen: false,
+    component: <About />,
   },
   {
     id: 2,
@@ -14,6 +20,7 @@ export const pages = [
     key: "skills",
     icon: "fluent:code-ts-16-filled",
     isOpen: false,
+    component: <Skills />,
   },
   {
     id: 3,
@@ -22,6 +29,7 @@ export const pages = [
     key: "works",
     icon: "fluent:code-ts-16-filled",
     isOpen: false,
+    component: <WorkHistory />,
   },
   {
     id: 4,
@@ -30,5 +38,6 @@ export const pages = [
     key: "portfolio",
     icon: "fluent:code-ts-16-filled",
     isOpen: false,
+    component: <Portfolio />,
   },
 ];

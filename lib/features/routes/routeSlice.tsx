@@ -1,6 +1,6 @@
 // lib/features/breadcrumb/routeSlice.ts
 
-import { pages } from "@/app/Configs/pageList";
+import { pages } from "@/app/Components/Main/Pages/pageList";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface RouteProps {

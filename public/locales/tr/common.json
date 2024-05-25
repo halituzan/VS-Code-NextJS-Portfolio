@@ -8,6 +8,10 @@
     "name.skills": "Yetenekler.ts",
     "name.works": "IsGecmisi.ts",
     "name.portfolio": "Portfolyo.ts",
-    "sidebar.title": "Gezgin"
-
+    "sidebar.title": "Gezgin",
+    "welcome.title": "Portfolyo Siteme Hoş Geldiniz!",
+    "welcome.pages": "Sayfaları görüntülemek için",
+    "welcome.search": "Sayfalarda arama için",
+    "welcome.lang": "Dili değiştirmek için",
+    "welcome.mode": "Modu değiştirmek için"
 }
