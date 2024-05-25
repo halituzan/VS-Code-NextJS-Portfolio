@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    font-family: var(--font-inter);
+}
+
+h1 {
+    font-family: var(--font-roboto-mono);
+}
+
+/* src/app/globals.css */
+
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.light {
+    background-color: #ffffff;
+    color: #000000;
+}

@@ -1,0 +1,21 @@
+.resizable {
+    position: relative;
+}
+
+.resizer {
+    background: transparent;
+    position: absolute;
+}
+
+.resizable:hover .resizer {
+    background: rgb(99 102 241);
+}
+
+.resizer-right {
+    cursor: col-resize;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+    height: 100%;
+    width: 0.25rem;
+}

@@ -1,0 +1,11 @@
+{
+    "title": "Kalbiniz kadar temiz bir Next.js projesi.",
+    "content": "# Hazır Kurulumlar",
+    "stage.management": "state yönetimi kullanıldı.",
+    "css.library": "CSS kütüphanesi kullanıldı",
+    "icon.library": "icon kütüphanesi kullanıldı.",
+    "localization": "ile dil yapılandırması yapıldı.",
+    "english": "İngilizce",
+    "turkish": "Türkçe",
+    "select.language":"Dil seçin"
+}
