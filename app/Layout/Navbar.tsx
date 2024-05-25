@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTheme } from "../Configs/ThemeContext";
 import { Icon } from "@iconify/react";
 import { useSelector } from "react-redux";
 import { selectedPageList } from "@/lib/features/routes/routeSlice";
+import { useTranslation } from "react-i18next";
 type Props = {};
 
 const Navbar = (props: Props) => {
+  const { t } = useTranslation("common");
   const { theme } = useTheme();
   const selectPageList = useSelector(selectedPageList);
   const currentPage = selectPageList.find((i) => i.isOpen);
-  console.log(currentPage);
+  const [isSearch, setIsSearch] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (isSearch) {
+      if (inputRef.current) {
+        (inputRef.current as HTMLInputElement).focus();
+      }
+    }
+  }, [isSearch]);
 
   const navBg =
     theme === "dark" ? "bg-slate-800 text-white/90" : "bg-slate-200";
@@ -38,13 +49,30 @@ const Navbar = (props: Props) => {
           />
         </div>
         <div
-          className={`rounded-md max-w-[500px] w-[500px] py-1 flex justify-center items-center ml-4 border ${
+          onClick={() => {
+            setIsSearch(true);
+          }}
+          className={`rounded-md max-w-[500px] w-auto md:w-[500px]  flex justify-center items-center ml-4 border ${
             theme === "dark"
               ? "border-slate-400 text-slate-300 hover:bg-slate-600"
               : "border-slate-400 text-slate-800 hover:bg-slate-300"
           }`}
         >
-          <p>{currentPage ? currentPage.title : "Hoş Geldiniz."}</p>
+          {!isSearch ? (
+            <p className='py-1 px-4'>
+              {currentPage ? t(currentPage.title) : t("welcome")}
+            </p>
+          ) : (
+            <input
+              ref={inputRef}
+              type='text'
+              placeholder='Search...'
+              onBlur={() => {
+                setIsSearch(false);
+              }}
+              className='outline-none w-full py-1 rounded-md px-4 bg-slate-400 text-white'
+            />
+          )}
         </div>
       </div>
       <div className='flex items-center'>

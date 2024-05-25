@@ -48,10 +48,10 @@ const Layout = ({ children }: Props) => {
           {currentSide === "search" && <SearchSide />}
         </aside>
 
-        <main className='w-full flex flex-col items-start flex-1 '>
+        <main className='w-full flex flex-col items-start flex-1 h-full'>
           {selectPageList.length > 0 && <PageNav />}
 
-          <div className='flex-1 p-2'>{children}</div>
+          <div className='flex-1 flex w-full'>{children}</div>
         </main>
       </div>
 

@@ -1,0 +1,15 @@
+{
+    "name":"İsim",
+    "email":"E-posta",
+    "phone":"Telefon",
+    "location":"Konum",
+    "degree":"Derece",
+    "freelance":"Serbert Çalışma",
+    "remote":"Uzaktan Çalışma",
+    "birthDay":"Doğum Tarihi",
+    "yes.freelance": "Uygun",
+    "no.freelance": "Uygun Değil",
+    "yes.remote": "Uygun",
+    "no.remote": "Uygun Değil",
+    "description": "5 yıllık E-ticaret girişimimin ardından yazılım alanında kendimi geliştirmeye karar verdim. E-ticaret firmam için bu aşamada yazılımlar geliştirirken yazılım alanına ilgim iyice arttı. Amatör olarak geliştirmeler yaparken bu işi profesyonel olarak yapmaya karar vererek bir bootcamp eğitimi ile profesyonel olarak yazılım hayatıma başladım. 2020 yılında aldığım eğitimden sonra yazılım hayatına geçerek e-ticaret sektöründen ayrıldım. Bu tarihten itibaren Javascript ekosisteminde yazılımlar geliştiriyorum. Bu süreç içerisinde projelerimde ReactJs ve NextJs gibi javascript frameworkleri kullanarak geliştirmeler yaptım. Bu geliştirmeler sırasında çeşitli CSS kütüphaneleri ve UI kütüphanelerinden yararlandım. Tailwindcss ağırlıklı bir şekilde Bootstrap ve SCSS teknolojileri ile projelerimi geliştirdim. MaterialUI, Mantin ve NextUI kütüphanelerini kullanarak UI zenginleştirmeleri yaptım. Projelerim büyüdükçe state yönetiminin zorlaştığını fark ederek Redux, Redux-toolkit kütüphanelerini öğrenip yeni projelerimde bu kütüphaneleri kullandım. Ekip çalışmasının zorluklarını aşmak için Eslint kullanımı konusunda kendimi geliştridim ve Typescript öğrenerek type kontrollü yeni projelerde çalıştım. Bu konularda kendimi geliştirirken bir yandan da NodeJs öğrenip MongoDB kullanarak projelerimi Full-Stack geliştirmeye devam ediyorum."
+}

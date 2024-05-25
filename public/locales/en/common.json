@@ -1,11 +1,12 @@
 {
-    "title": "A Next.js project as clean as your heart.",
-    "content": "# Ready Installations",
-    "stage.management": "State management is utilized.",
-    "css.library": "A CSS library is used.",
-    "icon.library": "An icon library is used.",
-    "localization": "Localization is configured.",
-    "english": "English",
-    "turkish": "Turkish",
-    "select.language": "Select an language"
+    "welcome": "Welcome",
+    "title.about": "About",
+    "title.skills": "Skills",
+    "title.works": "Work History",
+    "title.portfolio": "Portfolio",
+    "name.about": "About.ts",
+    "name.skills": "Skills.ts",
+    "name.works": "WorkHistory.ts",
+    "name.portfolio": "Portfolio.ts",
+    "sidebar.title": "Explorer"
 }

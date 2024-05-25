@@ -1,23 +1,29 @@
-import React, { useState } from "react";
-import { Icon } from "@iconify/react";
-import { useDispatch, useSelector } from "react-redux";
+import { useTheme } from "@/app/Configs/ThemeContext";
 import {
   openCurrentPage,
   pageListing,
   selectedPageList,
   setSelectedPagelist,
 } from "@/lib/features/routes/routeSlice";
+import { Icon } from "@iconify/react";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { useDispatch, useSelector } from "react-redux";
 type Props = {};
 
 const PageSide = (props: Props) => {
+  const { t } = useTranslation("common");
   const [openPotfolio, setOpenPortfolio] = useState(false);
   const dispatch = useDispatch();
+  const { theme } = useTheme();
   const pageListStore = useSelector(selectedPageList);
   const pageList = useSelector(pageListing);
 
   const pageHandler = (data: any) => {
-    dispatch(openCurrentPage({ item: data, isOpen: true }));
+    console.log("data", data);
+
     if (pageListStore.some((i) => i.id == data.id)) {
+      dispatch(openCurrentPage({ item: data, isOpen: true }));
     } else {
       dispatch(
         setSelectedPagelist({
@@ -31,19 +37,27 @@ const PageSide = (props: Props) => {
           type: "add",
         })
       );
+      dispatch(openCurrentPage({ item: data, isOpen: true }));
     }
   };
+  console.log(pageList);
 
   return (
     <div className='flex flex-col'>
-      <div className='h-10 flex items-center justify-between pl-5 pr-2 uppercase text-[14px]'>
-        Gezgin
-        <div className='hover:bg-slate-800 p-2 cursor-pointer rounded-md'>
+      <div className='h-10 flex items-center justify-between pl-5 pr-2 uppercase font-bold text-[14px]'>
+        {t("sidebar.title")}
+        <div
+          className={`p-2 cursor-pointer rounded-md ${
+            theme === "dark" ? "hover:bg-slate-800 " : "hover:bg-slate-300"
+          }`}
+        >
           <Icon icon='tabler:dots' />
         </div>
       </div>
       <div
-        className='w-full bg-slate-800/80 flex items-center cursor-pointer'
+        className={`w-full flex items-center cursor-pointer ${
+          theme === "dark" ? "bg-slate-800/80" : "bg-slate-300/80"
+        }`}
         onClick={() => {
           setOpenPortfolio(!openPotfolio);
         }}
@@ -67,18 +81,25 @@ const PageSide = (props: Props) => {
       {openPotfolio && (
         <div className='flex flex-col'>
           {pageList.map((item) => {
-            console.log(item.isOpen);
-
             return (
               <div
                 key={item.id}
                 onClick={() => pageHandler(item)}
-                className={`flex items-center pl-6 my-0.5 cursor-pointer ${
-                  item.isOpen && "bg-slate-600"
+                className={`flex items-center select-none pl-6 my-0.5 cursor-pointer ${
+                  item.isOpen && theme === "dark"
+                    ? "bg-slate-600"
+                    : item.isOpen && theme === "light"
+                    ? "bg-slate-500 text-white"
+                    : ""
                 }`}
               >
-                <Icon icon={item.icon} className='text-blue-400 mr-0.5' />
-                <p className='text-[14px]'>{item.name}</p>
+                <Icon
+                  icon={item.icon}
+                  className={`mr-0.5 ${
+                    theme === "dark" ? "text-blue-400" : "text-blue-500"
+                  }`}
+                />
+                <p className='text-[14px]'>{t(item.name)}</p>
               </div>
             );
           })}

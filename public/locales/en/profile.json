@@ -1,0 +1,15 @@
+{
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "degree": "Degree",
+    "freelance": "Freelance",
+    "remote": "Remote",
+    "birthDay": "Birth Day",
+    "yes.freelance": "Valid",
+    "no.freelance": "Invalid",
+    "yes.remote": "Valid",
+    "no.remote": "Invalid",
+    "description": "After my 5-year E-commerce venture, I decided to improve myself in the software field. While I was developing software for my e-commerce company at this stage, my interest in the software field increased even more. While I was making developments as an amateur, I decided to do this job professionally and started my professional software life with a bootcamp training. After the training I received in 2020, I left the e-commerce industry by switching to software life. Since this date, I have been developing software in the Javascript ecosystem. During this process, I developed my projects using JavaScript frameworks such as ReactJs and NextJs. I used various CSS libraries and UI libraries during these developments. I developed my projects with Bootstrap and SCSS technologies, mainly with Tailwindcss. I made UI enhancements using MaterialUI, Mantin and NextUI libraries. Realizing that state management was becoming more difficult as my projects grew, I learned Redux and Redux-toolkit libraries and used these libraries in my new projects. To overcome the difficulties of teamwork, I improved myself in the use of Eslint and learned Typescript and worked on new type-controlled projects. While I improve myself in these subjects, I also continue to learn NodeJs and develop my projects Full-Stack using MongoDB."
+}

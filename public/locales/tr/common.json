@@ -1,11 +1,13 @@
 {
-    "title": "Kalbiniz kadar temiz bir Next.js projesi.",
-    "content": "# Hazır Kurulumlar",
-    "stage.management": "state yönetimi kullanıldı.",
-    "css.library": "CSS kütüphanesi kullanıldı",
-    "icon.library": "icon kütüphanesi kullanıldı.",
-    "localization": "ile dil yapılandırması yapıldı.",
-    "english": "İngilizce",
-    "turkish": "Türkçe",
-    "select.language":"Dil seçin"
+    "welcome": "Hoş Geldiniz",
+    "title.about": "Hakkımda",
+    "title.skills": "Yetenekler",
+    "title.works": "İş Geçmişi",
+    "title.portfolio": "Portfolyo",
+    "name.about": "Hakkimda.ts",
+    "name.skills": "Yetenekler.ts",
+    "name.works": "IsGecmisi.ts",
+    "name.portfolio": "Portfolyo.ts",
+    "sidebar.title": "Gezgin"
+
 }
