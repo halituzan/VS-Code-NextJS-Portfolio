@@ -17,7 +17,7 @@ const Config = {
     "redux-toolkit",
     "e-commerce",
     "mantin",
-    "scss"
+    "scss",
   ],
   information: {
     name: "Halit Uzan",
@@ -31,5 +31,37 @@ const Config = {
     birthDay: "28 Şubat 1992",
     title: "Full-Stack Web Developer",
   },
+  social: [
+    {
+      id: "github",
+      name: "Github",
+      icon: "mdi:github",
+      url: "https://github.com/halituzan",
+    },
+    {
+      id: "twitter",
+      name: "Twitter",
+      icon: "mdi:twitter",
+      url: "https://x.com/uzandev",
+    },
+    {
+      id: "linkedin",
+      name: "LinkedIn",
+      icon: "mdi:linkedin",
+      url: "https://www.linkedin.com/in/halituzan/",
+    },
+    {
+      id: "stackoverflow",
+      name: "StackoverFlow",
+      icon: "mdi:stackoverflow",
+      url: "https://stackoverflow.com/users/12782922/halit-uzan",
+    },
+    // {
+    //   id: "codewars",
+    //   name: "Codewars",
+    //   icon: "cib:codewars",
+    //   url: "https://www.codewars.com/users/halituzan",
+    // },
+  ],
 };
 export default Config;

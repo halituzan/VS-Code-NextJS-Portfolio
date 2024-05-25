@@ -32,8 +32,8 @@ const Sidebar = (props: Props) => {
 
   const sidebarBg =
     theme === "dark"
-      ? "bg-slate-900 text-white/90 shadow shadow-slate-800"
-      : "bg-slate-300 shadow shadow-white";
+      ? "bg-dark2 text-light5/90 shadow shadow-slate-800"
+      : "bg-light2 shadow shadow-white";
   return (
     <div
       className={`min-w-[40px] flex  z-10 flex-col items-center  justify-between self-stretch ${sidebarBg}`}
@@ -68,11 +68,11 @@ const Sidebar = (props: Props) => {
                 className={` ${
                   theme === "dark"
                     ? i.path === currentSide || i.path === currentSideStorage
-                      ? "text-slate-200 hover:text-slate-200"
-                      : "text-slate-400 hover:text-slate-200"
+                      ? "text-light3 hover:text-light3"
+                      : "text-light1 hover:text-light3"
                     : i.path === currentSide || i.path === currentSideStorage
-                    ? "text-slate-900 hover:text-slate-900"
-                    : "text-slate-600 hover:text-slate-900"
+                    ? "text-dark2 hover:text-dark2"
+                    : "text-dark5 hover:text-dark2"
                 }`}
               />
             </div>
@@ -88,8 +88,8 @@ const Sidebar = (props: Props) => {
                 fontSize={32}
                 className={` ${
                   theme === "dark"
-                    ? "text-slate-400 hover:text-slate-200"
-                    : "text-slate-700 hover:text-slate-900"
+                    ? "text-light1 hover:text-light3"
+                    : "text-dark4 hover:text-dark2"
                 }`}
               />
             </div>
@@ -108,8 +108,8 @@ const Sidebar = (props: Props) => {
             fontSize={32}
             className={` ${
               theme === "dark"
-                ? "text-slate-400 hover:text-slate-200"
-                : "text-slate-700 hover:text-slate-900"
+                ? "text-light1 hover:text-light3"
+                : "text-dark4 hover:text-dark2"
             }`}
           />
         </div>
@@ -123,20 +123,20 @@ const Sidebar = (props: Props) => {
             fontSize={32}
             className={` ${
               theme === "dark"
-                ? "text-slate-400 hover:text-slate-200"
-                : "text-slate-700 hover:text-slate-900"
+                ? "text-light1 hover:text-light3"
+                : "text-dark4 hover:text-dark2"
             }`}
           />
           {showLang && (
-            <div className='absolute z-50 -top-10 left-12 flex flex-col justify-center items-center p-1 rounded-md bg-slate-500'>
+            <div className='absolute z-50 -top-10 left-12 flex flex-col justify-center items-center p-1 rounded-md bg-dark6'>
               <Icon
                 onClick={() => changeLanguage("tr")}
                 icon={"circle-flags:tr"}
                 fontSize={32}
                 className={`mb-2 cursor-pointer hover:shadow hover:shadow-slate-300 p-1 ${
                   theme === "dark"
-                    ? "text-slate-400 hover:text-slate-200"
-                    : "text-slate-700 hover:text-slate-900"
+                    ? "text-light1 hover:text-light3"
+                    : "text-dark4 hover:text-dark2"
                 }`}
               />
               <Icon
@@ -145,8 +145,8 @@ const Sidebar = (props: Props) => {
                 fontSize={32}
                 className={`cursor-pointer hover:shadow hover:shadow-slate-300 p-1 ${
                   theme === "dark"
-                    ? "text-slate-400 hover:text-slate-200"
-                    : "text-slate-700 hover:text-slate-900"
+                    ? "text-light1 hover:text-light3"
+                    : "text-dark4 hover:text-dark2"
                 }`}
               />
             </div>

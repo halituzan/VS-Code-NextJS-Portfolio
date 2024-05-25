@@ -7,7 +7,7 @@ const Footer = (props: Props) => {
   const { theme } = useTheme();
 
   const footerBg =
-    theme === "dark" ? "bg-slate-800 text-white/90" : "bg-slate-200";
+    theme === "dark" ? "bg-dark3 text-light5/90" : "bg-light3";
 
   return (
     <div className={`w-full h-6 px-1 flex ${footerBg}`}>

@@ -1,9 +1,5 @@
 import { selectedPageList } from "@/lib/features/routes/routeSlice";
 import { useSelector } from "react-redux";
-import About from "./Main/Pages/About";
-import Portfolio from "./Main/Pages/Portfolio";
-import Skills from "./Main/Pages/Skills";
-import WorkHistory from "./Main/Pages/WorkHistory";
 import Welcome from "./Main/Pages/Welcome";
 import { pages } from "./Main/Pages/pageList";
 type Props = {};
@@ -15,9 +11,11 @@ const Home = (props: Props) => {
   return (
     <div className='w-full flex-1'>
       {pages.map((item) => {
-        return currentPage && item.key === currentPage.key
-          ? item.component
-          : "";
+        return currentPage && item.key === currentPage.key ? (
+          <div key={item.id}>{item.component}</div>
+        ) : (
+          ""
+        );
       })}
       {!currentPage && <Welcome />}
     </div>

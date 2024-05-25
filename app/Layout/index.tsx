@@ -25,7 +25,7 @@ const Layout = ({ children }: Props) => {
   const selectPageList = useSelector(selectedPageList);
   const currentSideStorage = localStorage.getItem("currentSide");
   const mainBg =
-    theme === "dark" ? "bg-slate-700 text-white/90" : "bg-slate-100";
+    theme === "dark" ? "bg-dark4 text-light5/90" : "bg-light4";
 
   return (
     <div
@@ -40,7 +40,7 @@ const Layout = ({ children }: Props) => {
           className={`${
             currentSide || currentSideStorage ? "min-w-[250px]" : "w-0 hidden"
           } self-stretch resizable ${
-            theme === "dark" ? "bg-slate-950" : "bg-slate-400"
+            theme === "dark" ? "bg-dark1" : "bg-light1"
           }`}
         >
           <div className='resizer resizer-right' />

@@ -23,21 +23,59 @@ const PageSide = (props: Props) => {
 
   const pageHandler = (data: any) => {
     if (pageListStore.some((i) => i.id == data.id)) {
-      dispatch(openCurrentPage({ item: data, isOpen: true }));
+      dispatch(
+        openCurrentPage({
+          item: {
+            icon: data.icon,
+            id: data.id,
+            isOpen: data.isOpen,
+            key: data.key,
+            name: data.name,
+            title: data.title,
+          },
+          isOpen: true,
+        })
+      );
     } else {
       dispatch(
         setSelectedPagelist({
-          data,
+          data: {
+            icon: data.icon,
+            id: data.id,
+            isOpen: data.isOpen,
+            key: data.key,
+            name: data.name,
+            title: data.title,
+          },
           type: "closeAll",
         })
       );
       dispatch(
         setSelectedPagelist({
-          data,
+          data: {
+            icon: data.icon,
+            id: data.id,
+            isOpen: data.isOpen,
+            key: data.key,
+            name: data.name,
+            title: data.title,
+          },
           type: "add",
         })
       );
-      dispatch(openCurrentPage({ item: data, isOpen: true }));
+      dispatch(
+        openCurrentPage({
+          item: {
+            icon: data.icon,
+            id: data.id,
+            isOpen: data.isOpen,
+            key: data.key,
+            name: data.name,
+            title: data.title,
+          },
+          isOpen: true,
+        })
+      );
     }
   };
 
@@ -47,7 +85,7 @@ const PageSide = (props: Props) => {
         {t("sidebar.title")}
         <div
           className={`p-2 cursor-pointer rounded-md ${
-            theme === "dark" ? "hover:bg-slate-800 " : "hover:bg-slate-300"
+            theme === "dark" ? "hover:bg-dark3 " : "hover:bg-light2"
           }`}
         >
           <Icon icon='tabler:dots' />
@@ -55,7 +93,7 @@ const PageSide = (props: Props) => {
       </div>
       <div
         className={`w-full flex items-center cursor-pointer ${
-          theme === "dark" ? "bg-slate-800/80" : "bg-slate-300/80"
+          theme === "dark" ? "bg-dark3/80" : "bg-light2/80"
         }`}
         onClick={() => {
           setOpenPortfolio(!openPotfolio);
@@ -91,9 +129,9 @@ const PageSide = (props: Props) => {
                 onClick={() => pageHandler(item)}
                 className={`flex items-center select-none pl-6 my-0.5 cursor-pointer ${
                   item.isOpen && theme === "dark"
-                    ? "bg-slate-600"
+                    ? "bg-dark5"
                     : item.isOpen && theme === "light"
-                    ? "bg-slate-500 text-white"
+                    ? "bg-dark6 text-light5"
                     : ""
                 }`}
               >

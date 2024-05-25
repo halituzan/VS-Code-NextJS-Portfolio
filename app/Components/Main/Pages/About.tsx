@@ -1,7 +1,8 @@
 import Config from "@/app/Configs/config";
 import { useTheme } from "@/app/Configs/ThemeContext";
+import { Icon } from "@iconify/react";
 import Image from "next/image";
-import React, { FC } from "react";
+import Link from "next/link";
 import { useTranslation } from "react-i18next";
 const { highlightList } = Config;
 type Props = {};
@@ -39,7 +40,7 @@ const About = (props: Props) => {
   return (
     <div
       className={`flex-1 flex items-start justify-between gap-5 w-full h-full overflow-y-auto ${
-        theme === "dark" ? "bg-slate-800" : "bg-slate-300"
+        theme === "dark" ? "bg-dark4" : "bg-light2"
       }`}
     >
       <div className='image-and-info py-5 px-1 flex flex-col justify-start items-center max-w-[350px] self-stretch'>
@@ -52,7 +53,7 @@ const About = (props: Props) => {
         />
         <p
           className={`w-full text-center font-bold mt-2 ${
-            theme === "dark" ? "text-slate-300" : "text-slate-950"
+            theme === "dark" ? "text-light2" : "text-dark1"
           }`}
         >
           {Config.information.title}
@@ -98,12 +99,23 @@ const About = (props: Props) => {
             title={Config.information.remote ? t("yes.remote") : t("no.remote")}
           />
         </div>
+        <div className='flex justify-center w-full items-end flex-1'>
+          {Config.social.map((item) => {
+            return (
+              <Link key={item.id} href={item.url} target='_blank'>
+                <Icon
+                  icon={item.icon}
+                  fontSize={"2rem"}
+                  className='text-dark1 hover:text-light1'
+                />
+              </Link>
+            );
+          })}
+        </div>
       </div>
       <div
         className={`description flex-1 px-3 self-stretch py-5 ${
-          theme == "dark"
-            ? "bg-slate-900 text-slate-300"
-            : "bg-slate-100 text-slate-950"
+          theme == "dark" ? "bg-dark5 text-light2" : "bg-light4 text-dark1"
         }`}
       >
         {getHighlightedText(description, highlightList)}
@@ -119,14 +131,14 @@ export const InfoRow = ({ field, title, theme }: any) => {
     <>
       <p
         className={`px-5 py-2 col-span-2 font-bold flex items-center ${
-          theme === "dark" ? "text-slate-300" : "text-slate-900"
+          theme === "dark" ? "text-light2" : "text-dark2"
         }`}
       >
         {field}
       </p>
       <p
         className={`px-5 py-2 col-span-4 break-words w-full  font-medium flex items-center ${
-          theme === "dark" ? "text-slate-300" : "text-slate-950"
+          theme === "dark" ? "text-light2" : "text-dark1"
         }`}
       >
         {title}
