@@ -14,12 +14,12 @@ const Welcome = (props: Props) => {
 
   return (
     <div
-      className={`flex-1 flex flex-col items-center justify-center gap-5 w-full h-full overflow-y-auto ${
+      className={`flex-1 flex flex-col items-center  justify-center gap-5 w-full h-full ${
         theme === "dark" ? "bg-dark3/80" : "bg-light2/80"
       }`}
     >
       <h1
-        className={`text-2xl font-semibold flex items-center justify-center text-center min-w-[500px] ${
+        className={`text-2xl font-semibold flex items-center justify-center text-center w-2/3 md:min-w-[500px] ${
           theme === "dark" ? "text-light4" : "text-dark3"
         }`}
       >
@@ -80,11 +80,11 @@ export const InfoText = ({
 }) => {
   return (
     <div
-      className={`flex items-center justify-center min-w-[500px] ${
+      className={`flex items-center justify-center  w-2/3 md:min-w-[500px] ${
         theme === "dark" ? "text-light1" : "text-dark5"
       }`}
     >
-      <p className={`select-none w-1/2 flex justify-end`}>{text}</p>
+      <p className={`select-none w-1/2 flex md:text-md text-sm text-end justify-end`}>{text}</p>
       <span className='ml-5 select-none w-1/2'>
         {keyList.map((item, index) => {
           return (
@@ -93,7 +93,7 @@ export const InfoText = ({
               className={` ${
                 isOdd(index)
                   ? "mx-2"
-                  : "border border-slate-400 rounded p-1 px-2"
+                  : "border border-slate-400 rounded md:text-md text-sm  p-1 px-2"
               }`}
             >
               {item}

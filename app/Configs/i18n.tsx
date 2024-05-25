@@ -7,6 +7,8 @@ import trFooter from "../../public/locales/tr/footer.json";
 import enFooter from "../../public/locales/en/footer.json";
 import trProfile from "../../public/locales/tr/profile.json";
 import enProfile from "../../public/locales/en/profile.json";
+import trSkills from "../../public/locales/tr/skills.json";
+import enSkills from "../../public/locales/en/skills.json";
 
 const defaultLang = "tr";
 const resources = {
@@ -14,11 +16,13 @@ const resources = {
     common: trCommon,
     footer: trFooter,
     profile: trProfile,
+    skills: trSkills,
   },
   en: {
     common: enCommon,
     footer: enFooter,
     profile: enProfile,
+    skills: enSkills,
   },
 };
 

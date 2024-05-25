@@ -1,5 +1,5 @@
 const Config = {
-  mode: "light",
+  mode: "light", //* Default Mode
   highlightList: [
     //* Write the words you want to emphasize in the description in the About You section using lowercase letters.
     "javascript",
@@ -19,6 +19,100 @@ const Config = {
     "mantin",
     "scss",
   ],
+  skills: {
+    software: [
+      {
+        id: 1,
+        name: "Typescript",
+        icon: "skill-icons:typescript",
+      },
+      {
+        id: 2,
+        name: "Javascript",
+        icon: "skill-icons:javascript",
+      },
+      {
+        id: 3,
+        name: "HTML5",
+        icon: "skill-icons:html",
+      },
+      {
+        id: 4,
+        name: "CSS3",
+        icon: "skill-icons:css",
+      },
+      {
+        id: 5,
+        name: "ReactJs",
+        icon: "skill-icons:react-dark",
+      },
+      {
+        id: 6,
+        name: "NextJs",
+        icon: "skill-icons:nextjs-dark",
+      },
+      {
+        id: 7,
+        name: "NodeJs",
+        icon: "skill-icons:nodejs-dark",
+      },
+      {
+        id: 8,
+        name: "MongoDB",
+        icon: "skill-icons:mongodb",
+      },
+      {
+        id: 9,
+        name: "Git",
+        icon: "skill-icons:git",
+      },
+    ],
+    ui: [
+      {
+        id: 1,
+        name: "Material UI",
+        icon: "skill-icons:materialui-dark",
+      },
+
+      {
+        id: 2,
+        name: "Mantine",
+        icon: "logos:mantine-icon",
+      },
+      {
+        id: 3,
+        name: "TwilwindCss",
+        icon: "skill-icons:tailwindcss-dark",
+      },
+      {
+        id: 4,
+        name: "Bootstrap",
+        icon: "skill-icons:bootstrap",
+      },
+    ],
+    programs: [
+      {
+        id: 1,
+        name: "Figma",
+        icon: "skill-icons:figma-dark",
+      },
+      {
+        id: 2,
+        name: "Adobe XD",
+        icon: "skill-icons:xd",
+      },
+      {
+        id: 3,
+        name: "Adobe Illustrator",
+        icon: "skill-icons:illustrator",
+      },
+      {
+        id: 4,
+        name: "Adobe PhotoShop",
+        icon: "skill-icons:photoshop",
+      },
+    ],
+  },
   information: {
     name: "Halit Uzan",
     email: "halit.uzan@gmail.com",
@@ -62,6 +156,100 @@ const Config = {
     //   icon: "cib:codewars",
     //   url: "https://www.codewars.com/users/halituzan",
     // },
+  ],
+  workHistories: [
+    {
+      id: 1,
+      job: "FrontEnd Developer (Intern)",
+      company: "ETurnsoft",
+      companyLocation: "Türkiye / İstanbul",
+      workStart: "2021",
+      workEnd: "2022",
+      description: "description1",
+      technologies: [
+        "Javascript",
+        "HTML",
+        "CSS",
+        "ReactJs",
+        "NodeJs",
+        "MongoDB",
+        "Bootstrap",
+      ],
+      project: [],
+    },
+    {
+      id: 2,
+      job: "FrontEnd Developer",
+      company: "Codelisa Teknoloji",
+      companyLocation: "Türkiye / İstanbul",
+      workStart: "2022",
+      workEnd: "-",
+      description: "description2",
+      technologies: [
+        "Typescript",
+        "Javascript",
+        "HTML",
+        "CSS",
+        "ReactJs",
+        "NextJs(SSR)",
+        "TailwindCss",
+        "MaterialUI",
+        "Mantine",
+        "Micro-Frontend",
+      ],
+      project: [
+        {
+          id: 1,
+          title: "Tiktak",
+          technologies: ["NextJs", "MaterialUI", "Vuexy Template"],
+          icons: [
+            "skill-icons:nextjs-dark",
+            "skill-icons:materialui-dark",
+            "flat-color-icons:template",
+          ],
+          img: "/projects/tiktak.jpg",
+        },
+        {
+          id: 2,
+          title: "GOUP",
+          technologies: ["ReactJS", "Bootstrap", "Vuexy Template"],
+          icons: [
+            "skill-icons:react-dark",
+            "skill-icons:bootstrap",
+            "flat-color-icons:template",
+          ],
+          img: "/projects/goup.jpg",
+        },
+        {
+          id: 3,
+          title: "Muhakemat",
+          technologies: [
+            "ReactJS",
+            "Mantine",
+            "Styled Component",
+            "Micro-Frontend",
+          ],
+          icons: [
+            "skill-icons:react-dark",
+            "logos:mantine-icon",
+            "skill-icons:styledcomponents",
+            "carbon:microservices-1",
+          ],
+          img: "/projects/muhakemat.jpg",
+        },
+        {
+          id: 4,
+          title: "Talentswide",
+          technologies: ["NextJs(SSR)", "Figma Design", "Tailwindcss"],
+          icons: [
+            "skill-icons:nextjs-dark",
+            "skill-icons:figma-dark",
+            "skill-icons:tailwindcss-dark",
+          ],
+          img: "/projects/talentswide.jpg",
+        },
+      ],
+    },
   ],
 };
 export default Config;

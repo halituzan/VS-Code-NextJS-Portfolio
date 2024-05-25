@@ -172,7 +172,7 @@ const Navbar = (props: Props) => {
         </div> */}
         <div
           onClick={toggleFullscreen}
-          className={`w-10 h-10 flex justify-center items-center cursor-pointer ${
+          className={`w-10 h-10 md:flex hidden justify-center items-center cursor-pointer ${
             theme === "dark" ? "hover:bg-dark5" : "hover:bg-light2"
           }`}
         >

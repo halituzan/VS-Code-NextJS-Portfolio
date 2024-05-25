@@ -119,7 +119,7 @@ export default function PageNav(props: any) {
 
   return (
     <div
-      className={`pageNav flex items-center h-10 w-full ${
+      className={`pageNav flex items-center divide-x divide-slate-400 md:w-auto w-[calc(100vw-40px)] overflow-auto h-10  ${
         theme === "dark" ? "bg-dark3" : "bg-light3"
       }`}
     >
@@ -143,7 +143,7 @@ export default function PageNav(props: any) {
                 })
               );
             }}
-            className={`w-max px-3 select-none cursor-pointer h-10 flex justify-center items-center border-x border-x-slate-700 ${
+            className={`w-max px-3 select-none cursor-pointer h-10 flex justify-center items-center ${
               item.isOpen
                 ? theme === "dark"
                   ? "bg-dark2"

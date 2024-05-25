@@ -29,7 +29,7 @@ const Layout = ({ children }: Props) => {
 
   return (
     <div
-      className={`h-screen overflow-hidden flex flex-col justify-start items-start ${mainBg}`}
+      className={`min-h-screen max-h-screen overflow-hidden flex flex-col justify-start items-start ${mainBg}`}
     >
       <Navbar />
       <div className='flex justify-start items-start w-full flex-1'>
@@ -52,7 +52,7 @@ const Layout = ({ children }: Props) => {
           )}
         </aside>
 
-        <main className='w-full flex flex-col items-start flex-1 h-full'>
+        <main className='w-full flex flex-col items-start flex-1 self-stretch'>
           {selectPageList.length > 0 && <PageNav />}
 
           <div className='flex-1 flex w-full'>{children}</div>
