@@ -11,6 +11,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.3",
     "@types/redux-logger": "^3.0.13",
+    "axios": "^1.7.2",
     "i18next": "^23.11.3",
     "next": "14.2.3",
     "next-i18next": "^15.3.0",

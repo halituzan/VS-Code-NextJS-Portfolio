@@ -80,7 +80,7 @@ const Sidebar = (props: Props) => {
         })}
       </div>
       <div>
-        {settings.map((i) => {
+        {/* {settings.map((i) => {
           return (
             <div className='px-2 mb-1 py-3' key={i.id}>
               <Icon
@@ -94,7 +94,7 @@ const Sidebar = (props: Props) => {
               />
             </div>
           );
-        })}
+        })} */}
         <div
           className='px-2 mb-1 py-3 cursor-pointer relative'
           onClick={() => changeMode(mode === "light" ? "dark" : "light")}
@@ -165,11 +165,11 @@ const menu = [
     icon: "lucide:files",
     path: "pages",
   },
-  {
-    id: 2,
-    icon: "lucide:search",
-    path: "search",
-  },
+  // {
+  //   id: 2,
+  //   icon: "lucide:search",
+  //   path: "search",
+  // },
 ];
 const settings = [
   {
