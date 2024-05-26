@@ -1,3 +1,5 @@
+![image](https://github.com/halituzan/VS-Code-NextJS-Portfolio/assets/8484782/62c2bb8a-6f9f-415e-b1ec-e8df4cc467ab)
+
 # VS Code Template NextJS Portfolio
 
 It is a software developer portfolio site designed based on the VS Code editor. Created with Next.js 14.2.3 Version. Information is added statically inside. There is no database connection.
