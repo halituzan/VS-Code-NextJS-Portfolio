@@ -7,7 +7,7 @@ type Props = {};
 const Skills = (props: Props) => {
   const { t } = useTranslation("skills");
   return (
-    <div className='w-full p-5'>
+    <div className='w-full p-5 h-[calc(100vh-107px)] overflow-auto'>
       <div>
         <h2 className='text-2xl mb-2 border-b pb-1'>{t("title.software")}</h2>
         <div className='grid grid-cols-6 gap-5'>
@@ -15,7 +15,7 @@ const Skills = (props: Props) => {
             return (
               <div
                 key={index}
-                className='col-span-3 md:col-span-2 flex items-center '
+                className='col-span-6 sm:col-span-3 md:col-span-2 flex items-center'
               >
                 <Icon icon={item.icon} fontSize={"1.5rem"} />
                 <p className='text-xl ml-2'>{item.name}</p>
@@ -31,7 +31,7 @@ const Skills = (props: Props) => {
             return (
               <div
                 key={index}
-                className='col-span-3 md:col-span-2 flex items-center '
+                className='col-span-6 sm:col-span-3 md:col-span-2 flex items-center '
               >
                 <Icon icon={item.icon} fontSize={"1.5rem"} />
                 <p className='text-xl ml-2'>{item.name}</p>
@@ -47,7 +47,7 @@ const Skills = (props: Props) => {
             return (
               <div
                 key={index}
-                className='col-span-3 md:col-span-2 flex items-center '
+                className='col-span-6 sm:col-span-3 md:col-span-2  flex items-center '
               >
                 <Icon icon={item.icon} fontSize={"1.5rem"} />
                 <p className='text-xl ml-2'>{item.name}</p>

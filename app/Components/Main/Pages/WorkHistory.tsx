@@ -43,7 +43,11 @@ function WorkHistory({}: Props) {
                   return (
                     <p
                       key={i}
-                      className='px-3 py-1 rounded border border-slate-500 mr-1 mt-1 cursor-pointer select-none hover:bg-slate-400 hover:text-white'
+                      className={`px-3 py-1 rounded border mr-1 mt-1 cursor-pointer select-none ${
+                        theme === "dark"
+                          ? "hover:bg-slate-400 hover:text-white border-slate-500"
+                          : "hover:bg-slate-400 hover:text-white border-slate-500"
+                      } `}
                     >
                       {i}
                     </p>

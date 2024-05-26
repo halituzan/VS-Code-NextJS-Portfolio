@@ -162,7 +162,7 @@ const Config = {
       id: 1,
       job: "FrontEnd Developer (Intern)",
       company: "ETurnsoft",
-      url:"https://www.linkedin.com/company/eturnsoft/about/",
+      url: "https://www.linkedin.com/company/eturnsoft/about/",
       companyLocation: "Türkiye / İstanbul",
       workStart: "2021",
       workEnd: "2022",
@@ -182,7 +182,7 @@ const Config = {
       id: 2,
       job: "FrontEnd Developer",
       company: "Codelisa Teknoloji",
-      url:"https://www.codelisa.com.tr/",
+      url: "https://www.codelisa.com.tr/",
       companyLocation: "Türkiye / İstanbul",
       workStart: "2022",
       workEnd: "Now",
@@ -251,6 +251,91 @@ const Config = {
           img: "/projects/talentswide.jpg",
         },
       ],
+    },
+  ],
+  portfolio: [
+    {
+      id: 1,
+      title: "Entegrenity",
+      technologies: ["NextJs", "Tailwindcss", "Javascript", "MongoDb"],
+      icons: [
+        "skill-icons:nextjs-dark",
+        "skill-icons:tailwindcss-dark",
+        "skill-icons:javascript",
+        "skill-icons:mongodb",
+      ],
+      url: {
+        repo: false,
+        live: "https://www.entegrenity.com/",
+      },
+      description:
+        "Pazaryerleri API servislerini kullanarak e-ticaret işletmelerinin ürün yönetimini kolaylaştıran IMS sistemidir. Bu yazılımın amacı, eticaret işletmelerinin ürünlerini gruplayarak tek bir platformdan tüm ürünlerinin stok ve fiyat bilgilerini günvellemesidir.",
+      img: "/projects/entegrenity.jpg",
+    },
+    {
+      id: 2,
+      title: "Trendyol Barcode Finder",
+      technologies: ["HTML", "Javascript", "Bootstrap"],
+      icons: [
+        "skill-icons:html",
+        "skill-icons:javascript",
+        "skill-icons:bootstrap",
+      ],
+      url: {
+        repo: "https://github.com/halituzan/Trendyol-New-Barkod-Finder",
+        live: "https://chromewebstore.google.com/detail/trendyol-barkod-finder/mlpdemjleelebmdmhhnklcmhooniclpd",
+      },
+      description:
+        "Trendyol'da listelenen ürünlerin barkodlarını bulmayı kolaylaştıran Google Chrome eklentisidir. Versiyon 2 olarak geliştirilmiş bir üst versiyonudur. Eski versiyonu için Trendyol Barcode eklentisi incelenebilir.",
+      img: "/projects/barcode-finder.jpg",
+    },
+    {
+      id: 3,
+      title: "Trendyol Barcode Finder",
+      technologies: ["HTML", "Javascript", "Bootstrap"],
+      icons: [
+        "skill-icons:html",
+        "skill-icons:javascript",
+        "skill-icons:bootstrap",
+      ],
+      url: {
+        repo: "https://github.com/halituzan/Trendyol-Barcode-Old-Version",
+        live: "https://chromewebstore.google.com/detail/trendyol-barcode/bialioiclfnecalfpkdaijplbchfhoee",
+      },
+      description:
+        "Trendyol'da listelenen ürünlerin barkodlarını bulmayı kolaylaştıran Google Chrome eklentisidir. Versiyon 1 olarak geliştirilmiştir. Yeni versiyonu için Trendyol Barcode Finder eklentisi incelenebilir.",
+      img: "/projects/barcode.jpg",
+    },
+    {
+      id: 4,
+      title: "TDK All API Package",
+      technologies: ["NPM", "Javascript"],
+      icons: ["skill-icons:npm-dark", "skill-icons:javascript"],
+      url: {
+        repo: "https://github.com/halituzan/tdk-all-api",
+        live: "https://www.npmjs.com/package/tdk-all-api",
+      },
+      description:
+        "Türk Dil Kurumu API larını kullanarak istenilen kelimenin anlamlarını JSON response olarak getiren bir npm paketi.",
+      img: "/projects/tdk.jpg",
+    },
+    {
+      id: 5,
+      title: "LingoManiac Word Game",
+      technologies: ["NextJs", "Tailwindcss", "Typescript", "MongoDB"],
+      icons: [
+        "skill-icons:nextjs-dark",
+        "skill-icons:tailwindcss-dark",
+        "skill-icons:typescript",
+        "skill-icons:mongodb",
+      ],
+      url: {
+        repo: "https://github.com/halituzan/lingomania",
+        live: "https://lingomania.vercel.app/",
+      },
+      description:
+        "Belirli bir kelimeyi bulmaya çalıştığınız ve sadece bulmaya çalıştığınız kelimenin baş harfini kullanarak denemeler yapabildiğiniz bir kelime oyunu. Mobil uygulaması için testlerin yapıldığı bir ara web yazılımı.",
+      img: "/projects/lingo-web.jpg",
     },
   ],
 };
