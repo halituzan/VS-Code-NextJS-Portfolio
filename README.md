@@ -1,3 +1,5 @@
+
+
 ![image](https://github.com/halituzan/VS-Code-NextJS-Portfolio/assets/8484782/62c2bb8a-6f9f-415e-b1ec-e8df4cc467ab)
 
 # VS Code Template NextJS Portfolio
@@ -93,7 +95,7 @@ Via this file:
 - For the Skills page, you can categorize your skills according to which field you have and give them the icons you want. For icons you should use the [Iconify](https://icon-sets.iconify.design/) Library.
 - You must add information about yourself in the Information field.
 - You can add your social media links from the social area.
-- You can add your work history from the workHistory field. It's important to stick to the template here. If you want to do more customization. You will need to make changes to the *app/Components/Main/Pages/WorkHistory.tsx* file.
+- You can add your work history from the workHistories field. It's important to stick to the template here. If you want to do more customization. You will need to make changes to the *app/Components/Main/Pages/WorkHistory.tsx* file.
 - You can add the projects in your portfolio from the portfolio field. It's important to stick to the template here. If you want to do more customization. You will need to make changes to the *app/Components/Main/Pages/Portfolio.tsx* file.
 
 ## 3. Color Configuration
